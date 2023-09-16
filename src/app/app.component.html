@@ -1,0 +1,50 @@
+<mat-toolbar class="top_menu">
+  <mat-toolbar-row>
+    <span><img src="../assets/images/logo.png" style="width:150px;height:45px;vertical-align:bottom;"></span>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleNav(sidenav)">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span class="fill-remaining-space"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Edit Profile</button>
+      <button mat-menu-item>View Profile</button>
+    </mat-menu>
+    <button mat-icon-button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="exit_to_app"></mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list style="width: 200px;">
+      <a mat-list-item routerLink="dashboard" >
+        <mat-icon>dashboard</mat-icon>&nbsp;<label>Dashboard</label>
+      </a>
+      <a mat-list-item routerLink="dealers" >
+        <mat-icon>store</mat-icon>&nbsp;<label>Dealers Details</label>
+      </a>
+      <a mat-list-item routerLink="orders" >
+        <mat-icon>shopping_cart</mat-icon>&nbsp;<label>Orders</label>
+      </a>
+      <a mat-list-item routerLink="products" >
+        <mat-icon>card_travel</mat-icon>&nbsp;<label>Products</label>
+      </a>
+      <a mat-list-item routerLink="customers">
+        <mat-icon>supervisor_account</mat-icon>&nbsp;<label>Customers</label>
+      </a>
+      <a mat-list-item routerLink="dashboard-barchart">
+        <mat-icon>supervisor_account</mat-icon>&nbsp;<label>Bar chart</label>
+      </a>
+      <a mat-list-item routerLink="dashboard-linechart">
+        <mat-icon>supervisor_account</mat-icon>&nbsp;<label>Line Chart</label>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p style="height: 85vh;">
+      <router-outlet></router-outlet>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>

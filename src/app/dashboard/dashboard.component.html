@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="float: left;">
+            <mat-card [appearance]="appearance" style="width:280px;height: 3cm;margin: 0.5cm;">
+                <div class="col-12 lg:col-6 xl:col-3">
+                    <mat-card-header>
+                        <mat-card-subtitle>No of Dealers</mat-card-subtitle>
+                        <mat-card-title>{{noofdealers}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content style="float: right;">
+                        <p><mat-icon style="color: #33b29a;">store</mat-icon></p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>Like</button>
+                        <button mat-button>Share</button>
+                    </mat-card-actions>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <mat-card [appearance]="appearance" style="width:280px;height: 3cm;margin: 0.5cm;">
+                <div class="col-12 lg:col-6 xl:col-3">
+                    <mat-card-header>
+                        <mat-card-subtitle>Total Orders</mat-card-subtitle>
+                        <mat-card-title>{{nooforders}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content style="float: right;">
+                        <p><mat-icon style="color: #e72c22;">shopping_cart</mat-icon></p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>Like</button>
+                        <button mat-button>Share</button>
+                    </mat-card-actions>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <mat-card [appearance]="appearance" style="width:280px;height: 3cm;margin: 0.5cm;">
+                <div class="col-12 lg:col-6 xl:col-3">
+                    <mat-card-header>
+                        <mat-card-subtitle>No of Products</mat-card-subtitle>
+                        <mat-card-title>{{noofproducts}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content style="float: right;">
+                        <p><mat-icon>card_travel</mat-icon></p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>Like</button>
+                        <button mat-button>Share</button>
+                    </mat-card-actions>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <mat-card [appearance]="appearance" style="width:280px;height: 3cm;margin: 0.5cm;">
+                <div class="col-12 lg:col-6 xl:col-3">
+                    <mat-card-header>
+                        <mat-card-subtitle>Total Customers</mat-card-subtitle>
+                        <mat-card-title>{{noofcustomers}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content style="float: right;">
+                        <p><mat-icon>supervisor_account</mat-icon></p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>Like</button>
+                        <button mat-button>Share</button>
+                    </mat-card-actions>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<div class="grid p-fluid">
+    <!-- <dashboard-barchart></dashboard-barchart> -->
+    <!-- <img src="../../assets/images/Admin_dashboard.png"> -->
+</div>

@@ -1,0 +1,62 @@
+<h3 style="margin-left: 15px;">Dealers List</h3>
+<div class="mat-elevation-z8">  
+    <table mat-table [dataSource]="dataSource">
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Product Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef>Price Range</th>
+          <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+    
+        <!-- Status Column -->
+      <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let element">
+              <mat-chip-listbox aria-label="Fish selection">
+                  <mat-chip-option color="success" selected>{{element.status}}</mat-chip-option>
+              </mat-chip-listbox>
+          </td>
+      </ng-container>
+  
+        <!-- Options columns -->
+        <ng-container matColumnDef="option">
+          <th mat-header-cell *matHeaderCellDef>Options</th>
+          <td mat-cell *matCellDef="let element"><button>{{element.option}}<mat-icon class="visi_icon">visibility</mat-icon></button><button><mat-icon class="create_icon">create</mat-icon></button><button><mat-icon class="del_icon">delete</mat-icon></button></td>
+        </ng-container>mat-icon
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                     showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+  </div>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="grid p-fluid">
+    <img src="../../assets/images/Admin_vendor_details.png">
+</div>

@@ -1,0 +1,23 @@
+.top_menu {
+    background-color: #FFF;
+    color: #6c757d;
+    border-bottom: 0.5px solid rgb(214, 204, 204);
+    height: 1cm;
+}
+
+button:hover{
+    color: #000;
+}
+
+.vertical-menu {
+    background-color: #FFF;
+    color: #6c757d;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.mat-sidenav a:hover {
+    color: #E91E63;
+}
